@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025上半年述职报告</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f9ff 0%, #edf3ff 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 15px 50px rgba(0, 46, 109, 0.15);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(120deg, #2c6fbb, #1a4a8a);
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.92;
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        
+        .info-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.18);
+            padding: 18px;
+            border-radius: 12px;
+            backdrop-filter: blur(8px);
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.05rem;
+        }
+        
+        main {
+            padding: 45px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #2c6fbb;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 3px solid #e0eeff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title i {
+            background: #e0eeff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c6fbb;
+        }
+        
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .project-card {
+            background: #f8fbff;
+            border: 1px solid #d6e7ff;
+            border-radius: 14px;
+            padding: 30px;
+            transition: all 0.4s ease;
+            box-shadow: 0 6px 20px rgba(0, 73, 183, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, #3b8cff, #2c6fbb);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 73, 183, 0.15);
+            border-color: #a8d0ff;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .project-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1a4a8a;
+        }
+        
+        .project-tag {
+            background: #e0eeff;
+            color: #2c6fbb;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .project-content ul {
+            padding-left: 22px;
+        }
+        
+        .project-content li {
+            margin-bottom: 14px;
+            position: relative;
+            padding-left: 10px;
+            line-height: 1.7;
+        }
+        
+        .project-content li::before {
+            content: "•";
+            color: #3b8cff;
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+            font-size: 1.4rem;
+        }
+        
+        .systems-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .system-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0eeff;
+            transition: transform 0.3s ease;
+        }
+        
+        .system-card:hover {
+            transform: scale(1.03);
+            border-color: #8bc1ff;
+        }
+        
+        .system-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1a4a8a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .system-title i {
+            background: #e0eeff;
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c6fbb;
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .metric-card {
+            background: white;
+            border-radius: 14px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e0eeff;
+            transition: transform 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            transform: translateY(-5px);
+            border-color: #8bc1ff;
+        }
+        
+        .metric-icon {
+            font-size: 2.5rem;
+            color: #2c6fbb;
+            margin-bottom: 15px;
+        }
+        
+        .metric-value {
+            font-size: 2.6rem;
+            font-weight: 800;
+            color: #1a4a8a;
+            margin: 10px 0;
+            line-height: 1.2;
+        }
+        
+        .metric-label {
+            color: #4b5563;
+            font-size: 1.05rem;
+        }
+        
+        .planning {
+            background: #f0f8ff;
+            border-radius: 14px;
+            padding: 30px;
+            margin-top: 20px;
+            border: 1px solid #a8d0ff;
+        }
+        
+        .planning-title {
+            font-size: 1.4rem;
+            color: #1a4a8a;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .planning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .plan-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #d6e7ff;
+            transition: all 0.3s ease;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 73, 183, 0.1);
+            border-color: #8bc1ff;
+        }
+        
+        .plan-card h3 {
+            font-size: 1.3rem;
+            color: #1a4a8a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .plan-card h3 i {
+            color: #2c6fbb;
+        }
+        
+        .plan-card ul {
+            padding-left: 25px;
+        }
+        
+        .plan-card li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+        
+        .plan-card li::before {
+            content: "—";
+            position: absolute;
+            left: -20px;
+            color: #3b8cff;
+        }
+        
+        .signature {
+            text-align: right;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 1px dashed #cbd5e1;
+        }
+        
+        .signature p {
+            font-size: 1.1rem;
+            color: #4b5563;
+            margin-bottom: 5px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #f1f7ff;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            main {
+                padding: 30px 20px;
+            }
+            
+            .projects-container, .systems-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>2025上半年述职报告</h1>
+                <div class="info-bar">
+                    <div class="info-item">
+                        <i class="fas fa-user"></i>
+                        <span>ike莫翔达</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>2025年1月 - 2025年6月</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-building"></i>
+                        <span>研发部 | 质量测试</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <main>
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-project-diagram"></i>
+                    上半年主要项目
+                </h2>
+                <div class="projects-container">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">直播平台项目</div>
+                        </div>
+                        <div class="project-content">
+                            <ul>
+                                <li>独自负责app直播项目全链路测试</li>
+                                <li>设计并执行200+直播场景测试用例，覆盖直播、录播、发言、直播销售等核心功能</li>
+								<li>校验直播声网回调数据、环信发言数据的正确性以及完整性</li>
+								<li>针对直播进行性能测试、消息测试、重连测试、异常等测试</li>
+                                <li>主导小程序兼容直播，包括打通app与小程序连接的测试、直播相关功能、发言、商城功能</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">5A项目</div>
+                        </div>
+                        <div class="project-content">
+                            <ul>
+								<li>负责测试5A全流程测试</li>
+								<li>确定部分数据口径，业务表以及埋点数据</li>
+								<li>负责5A移动端数据测试以及业务测试</li>
+                                <li>负责5A作战室数据测试以及业务测试</li>
+								<li>负责5A详情tab 1-5数据测试以及业务测试</li>
+                                <li>负责测试部分接口测试，提前暴露问题、回归测试以及生产接口验证</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-header">
+                            <div class="project-title">营销数字化平台</div>
+                        </div>
+                        <div class="project-content">
+                            <ul>
+                                <li>主导营销系统全流程测试</li>
+								<li>到访管理功能逻辑测试，香港门店需求以及到访五期优化测试</li>
+                                <li>私域分配功能逻辑测试，绿微注册以及裂变功能测试</li>
+								<li>运营活动测试，包括抽奖活动、助力活动、模板资料活动等测试</li>
+                                <li>对于业务方提出需求，协助产品给出需求方案以及解决方案</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-cogs"></i>
+                    负责系统
+                </h2>
+                <div class="systems-container">
+                    <div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            营销系统
+                        </div>
+                        <ul>
+                            <li>活动管理，生成营销活动，包括抽奖活动、海报、小程序测评、助力活动、模板资料活动</li>
+                            <li>账号管理与排班，绿微注册以及裂变以及排班功能</li>
+                            <li>任务管理，任务下发以及可以在侧边栏发送活动描述跟活动码</li>
+                            <li>到访管理，记录客户到访情况，通知相关接待人员以及提醒客户到访信息</li>
+                        </ul>
+                    </div>
+					
+					<div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            直播
+                        </div>
+                        <ul>
+                            <li>直播，包括app直播、小程序直播、直播后台管理、直播数据统计</li>
+                            <li>app直播与录播，包括直播下单、购物车、发言等</li>
+                            <li>小程序支持直播，直播授权入库等逻辑</li>
+                            <li>直播数据统计，声网与环信数据回调</li>
+                        </ul>
+                    </div>
+                    
+					<div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            小程序以及管理系统
+                        </div>
+                        <ul>
+                            <li>小程序后台管理，文章、视频、攻略推荐等</li>
+                            <li>小程序私域分配，包括测评码、推荐有礼、文章、视频</li>
+                            <li>小程序私域分配方式，指定顾问、推荐人分配、新池分配、公海激活</li>
+                            <li>小程序绿微注册以及绿微裂变，记录客户链路</li>
+                        </ul>
+                    </div>
+					
+					<div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            内容管理系统
+                        </div>
+                        <ul>
+                            <li>文章管理，编写文章到文章库，以便小程序后台使用</li>
+                            <li>视频管理，上传视频到视频库，以便小程序后台使用</li>
+                        </ul>
+                    </div>
+					
+                    <div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            diy系统
+                        </div>
+                        <ul>
+                            <li>宜港汇小程序，文章、下单流程、售后流程、测评、转介</li>
+                            <li>宜港汇后台管理系统，文章管理、转介管理、商品管理</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            官网
+                        </div>
+                        <ul>
+                            <li>官网测评页营销，身份续签测评评估、资源入库逻辑、资源分配逻辑</li>
+                            <li>官网后台管理，头条新闻、内容攻略、数据统计</li>
+                    </div>
+					
+					<div class="system-card">
+                        <div class="system-title">
+                            <i class="fas fa-puzzle-piece"></i>
+                            AI创作平台
+                        </div>
+                        <ul>
+                            <li>社媒管理，社媒评论、社媒作品线索</li>
+                            <li>新媒体工具，封面图管理、作品关联线索管理</li>
+                            <li>AI创作，小红书教育类生成器、旅游规划助手、小红书话题创作</li>
+                            <li>AI作图，图片制作、媒体管理</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">
+                    <i class="fas fa-road"></i>
+                    下半年工作计划
+                </h2>
+                <div class="planning">
+                    <div class="planning-grid">
+                        <div class="plan-card">
+                            <h3><i class="fas fa-headset"></i> 业务熟悉</h3>
+                            <ul>
+                                <li>业务转型到商务模块、快速上手并能够独立完成测试任务</li>
+								<li>业务转型到门店模块、快速上手并能够独立完成测试任务</li>
+                                <li>AI文书生成项目，能够独立完成测试任务并定位问题</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="plan-card">
+                            <h3><i class="fas fa-store"></i> 跟进迭代项目</h3>
+                            <ul>
+                                <li>继续跟进5A项目后续迭代</li>
+                                <li>续集跟进当前负责系统的后续迭代任务</li>
+								<li>跟进临时性项目，听从领导安排</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="plan-card">
+                            <h3><i class="fas fa-handshake"></i> 团队合作</h3>
+                            <ul>
+                                <li>协助接手新项目的同事的业务支持</li>
+                                <li>讲解营销活动相关业务、直播相关业务、私域分配业务</li>
+                                <li>答疑并解决营运、产品提出的问题，协助使用系统</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="signature">
+                <p>报告人：ike莫翔达</p>
+                <p>2024年6月24日</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>© 2025 质量保障中心 | 数据统计周期：2025年1月1日 - 2025年6月24日</p>
+        </footer>
+    </div>
+</body>
+</html>
